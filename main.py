@@ -13,7 +13,6 @@ def load_data(url):
         return -1, False
 
 
-@st.cache
 def daily_cases(df):
     st.header("Today's Stats")
     col1, col2, col3 = st.columns(3)
@@ -34,7 +33,6 @@ def daily_cases(df):
     st.line_chart(df['Daily Recovered'].rolling(7).mean())
 
 
-@st.cache
 def total_cases(df):
     st.header("Total Stats")
     col1, col2, col3 = st.columns(3)
